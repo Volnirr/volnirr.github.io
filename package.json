@@ -16,7 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://volnirr.github.io",
+  "homepage": "https://github.com/volnirr/volnirr.gituhb.io",
   "eslintConfig": {
     "extends": [
       "react-app",
