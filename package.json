@@ -16,7 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://your-username.github.io/your-repository",
+  "homepage": "https://volnirr.github.io",
 
   "eslintConfig": {
     "extends": [
