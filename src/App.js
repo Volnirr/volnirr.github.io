@@ -1,13 +1,28 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
-function Navbar() {
+const tabs = [
+  "Hub",
+  "Projects",
+  "About"
+];
+
+function drawNavBox(name) {
+  return (
+    <Link to={`/${name}`}> {name} </Link>
+  );
+}
+
+function Navbar() { 
+  const boxes = [];
+  for (let item of tabs) {
+    boxes.push(drawNavBox(item));
+  }
+
   return (
     <nav className="p-4 bg-gray-100">
         <p>
-          <Link to="/hub" className="hover:text-blue-600">Hub - </Link>
-          <Link to="/projects" className="hover:text-blue-600">Projects - </Link>
-          <Link to="/about" className="hover:text-blue-600">About</Link>
+          {boxes}
         </p>
     </nav>
   );
@@ -20,9 +35,9 @@ function Home() {
       <p> 
         | <br></br>
         | <br></br>
-        ˇ 
+        ˇ <br></br>
+        <Link to="/hub"className="Main-button">click</Link>
       </p>
-      <Link to="/hub"className="Main-button">click</Link>
     </div>
   );
 }
