@@ -71,29 +71,34 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
+
           <Route path="/" element={
             <div>
               <Home />
             </div>
           } />
+
           <Route path="/hub" element={
             <div>
               <Navbar />
               <Hub />
             </div>
           } />
+
           <Route path="/projects" element={
             <div>
               <Navbar />
               <Projects />
             </div>
           } />
+
           <Route path="/about" element={
             <div>
               <Navbar />
               <About />
             </div>
           } />
+
         </Routes>
       </div>
     </BrowserRouter>
