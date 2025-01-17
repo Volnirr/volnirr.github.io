@@ -20,7 +20,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="p-4 bg-gray-100">
+    <nav>
         <p>
           {boxes}
         </p>
@@ -30,13 +30,13 @@ function Navbar() {
 
 function Home() {
   return (
-    <div className="App-header">
+    <div>
       <p>Welcome</p>
       <p> 
         | <br></br>
         | <br></br>
         ˇ <br></br>
-        <Link to="/hub"className="Main-button">click</Link>
+        <Link to="/hub">click</Link>
       </p>
     </div>
   );
@@ -44,24 +44,24 @@ function Home() {
 
 function Hub() {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Hub</h1>
+    <div className="Vapor">
+      <h1>Hub</h1>
     </div>
   );
 }
 
 function Projects() {
   return(
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Projects</h1>
+    <div>
+      <h1>Projects</h1>
     </div>
   );
 }
 
 function About() {
   return(
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">About</h1>
+    <div>
+      <h1>About</h1>
     </div>
   );
 }
@@ -69,7 +69,7 @@ function About() {
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="scanline">
         <Routes>
 
           <Route path="/" element={

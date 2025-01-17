@@ -1,18 +1,129 @@
-.App {
-  text-align: center;
+:root {
+  --neon-pink: #ff71ce;
+  --neon-blue: #01cdfe;
+  --neon-purple: #b967ff;
+  --neon-green: #05ffa1;
+  --retro-black: #1d1d1d;
+  --grid-color: rgba(255, 113, 206, 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(30px + 2vmin);
+body {
+  background-color: var(--retro-black);
+  background-image: 
+    linear-gradient(0deg, transparent 24%, 
+      var(--grid-color) 25%, 
+      var(--grid-color) 26%, 
+      transparent 27%, 
+      transparent 74%, 
+      var(--grid-color) 75%, 
+      var(--grid-color) 76%, 
+      transparent 77%),
+    linear-gradient(90deg, transparent 24%, 
+      var(--grid-color) 25%, 
+      var(--grid-color) 26%, 
+      transparent 27%, 
+      transparent 74%, 
+      var(--grid-color) 75%, 
+      var(--grid-color) 76%, 
+      transparent 77%);
+  background-size: 50px 50px;
   color: white;
+  font-family: "VT323", monospace;
 }
 
-.Main-button {
-  color: yellow;
-  text-decoration: underline;
+h1, h2, h3 {
+  color: var(--neon-pink);
+  text-shadow: 3px 3px var(--neon-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.vaporwave-box {
+  border: 2px solid var(--neon-purple);
+  background: rgba(29, 29, 29, 0.8);
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.vaporwave-text {
+  animation: textGlitch 3s infinite;
+  color: var(--neon-green);
+}
+
+.vaporwave-button {
+  background: var(--neon-purple);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.vaporwave-button:hover {
+  background: var(--neon-pink);
+  box-shadow: 0 0 20px var(--neon-blue);
+  transform: scale(1.05);
+}
+
+.vaporwave-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.vaporwave-button:hover::before {
+  left: 100%;
+}
+
+@keyframes textGlitch {
+  0% {
+    text-shadow: 2px 2px var(--neon-pink),
+                -2px -2px var(--neon-blue);
+  }
+  25% {
+    text-shadow: -2px 2px var(--neon-green),
+                2px -2px var(--neon-purple);
+  }
+  50% {
+    text-shadow: 2px -2px var(--neon-blue),
+                -2px 2px var(--neon-pink);
+  }
+  75% {
+    text-shadow: -2px -2px var(--neon-purple),
+                2px 2px var(--neon-green);
+  }
+  100% {
+    text-shadow: 2px 2px var(--neon-pink),
+                -2px -2px var(--neon-blue);
+  }
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 999;
 }
