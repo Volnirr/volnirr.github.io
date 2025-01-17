@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 const tabs = [
   "Hub",
@@ -7,23 +7,16 @@ const tabs = [
   "About"
 ];
 
-function drawNavBox(name, onClick) {
+function drawNavBox(name) {
   return (
-    <button 
-      onClick={onClick}
-      className="hover:text-blue-600 px-3 py-1 mx-1"
-    >
-      {name}
-    </button>
+    <Link to={`/${name}`}> {name} </Link>
   );
 }
 
 function Navbar() { 
-  const navigate = useNavigate();
-
   const boxes = [];
   for (let item of tabs) {
-    boxes.push(drawNavBox(item, () => navigate(`/${item}`)));
+    boxes.push(drawNavBox(item));
   }
 
   return (
@@ -76,7 +69,7 @@ function About() {
 function App() {
   return (
     <BrowserRouter>
-      <div className="scanline">
+      <div>
         <Routes>
 
           <Route path="/" element={
