@@ -1,28 +1,15 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-
-const tabs = [
-  "Hub",
-  "Projects",
-  "About"
-];
-
-function drawNavBox(name) {
-  return (
-    <Link to={`/${name}`}> {name} </Link>
-  );
-}
+import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import './ScrollingText.js';
+import ScrollingText from './ScrollingText.js';
 
 function Navbar() { 
-  const boxes = [];
-  for (let item of tabs) {
-    boxes.push(drawNavBox(item));
-  }
-
   return (
     <nav>
         <p>
-          {boxes}
+          <Link to="/hub"> Hub </Link>
+          <Link to="/projects"> Projects </Link>
+          <Link to="/about"> About </Link>
         </p>
     </nav>
   );
@@ -31,7 +18,10 @@ function Navbar() {
 function Home() {
   return (
     <div>
-      <p>Welcome</p>
+      <ScrollingText 
+        text="welcome" 
+        speed={20}
+      />
       <p> 
         | <br></br>
         | <br></br>
