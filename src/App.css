@@ -127,3 +127,8 @@ h1, h2, h3 {
   pointer-events: none;
   z-index: 999;
 }
+
+.Navbar {
+  color: #00022c;
+  text-decoration: none;
+}
