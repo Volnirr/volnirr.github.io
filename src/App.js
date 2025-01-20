@@ -1,5 +1,6 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useNavigate} from 'react-router-dom';
+import * as React from 'react';
 import './ScrollingText.js';
 import ScrollingText from './ScrollingText.js';
 
@@ -16,17 +17,30 @@ function Navbar() {
 }
 
 function Home() {
+  let navigate = useNavigate();
+
   return (
-    <div>
+    <div className="vaporwave-text" style={{'font-size': 50, 'text-align': 'center'}}>
+      <br></br>
+      <br></br>
       <ScrollingText 
         text="welcome" 
         speed={20}
       />
       <p> 
+      <br></br>
         | <br></br>
         | <br></br>
         ˇ <br></br>
-        <Link to="/hub">click</Link>
+        <button 
+          type='button' 
+          className="vaporwave-button"
+          onClick={() => {
+            navigate('/hub')
+          }}
+        >
+          click
+        </button>
       </p>
     </div>
   );

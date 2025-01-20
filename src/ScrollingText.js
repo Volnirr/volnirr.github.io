@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ScrollingText = ({ text, speed = 20, className = '' }) => {
+const ScrollingText = ({ text, speed = 20}) => {
   return (
     // outer that defines viewport
     <div 
@@ -9,7 +9,6 @@ const ScrollingText = ({ text, speed = 20, className = '' }) => {
         overflow: 'hidden',
         width: '100%',
       }}
-      className={className}
     >
       <div
         style={{
@@ -25,10 +24,10 @@ const ScrollingText = ({ text, speed = 20, className = '' }) => {
       <style jsx>{`
         @keyframes scroll {
           from {
-            transform: translateX(-10vw);
+            transform: translateX(-60vw);
           }
           to {
-            transform: translateX(100vw);
+            transform: translateX(60vw);
           }
         }
       `}</style>

@@ -111,3 +111,7 @@ h1, h2, h3 {
                 -2px -2px var(--neon-blue);
   }
 }
+
+.home-scroller {
+  size: 50px;
+}
