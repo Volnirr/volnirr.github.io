@@ -6,3 +6,11 @@ body {
 footer {
 	text-align: center;
 }
+
+a {
+	color: #e08300;
+}
+
+header, ,h1, h2 {
+	text-decoration: none;
+}
