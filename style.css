@@ -11,7 +11,16 @@ a {
 	color: #e08300;
 }
 
-header, ,h1, h2 {
+header {
+	text-align: center ;
 	text-decoration: none;
-	text-align: center;
+}
+header h1 {
+	font-size: 30pt ;
+	text-decoration: none;
+	text-align: center ;
+}
+header h2 {
+	text-decoration: none;
+	text-align: center ;
 }
