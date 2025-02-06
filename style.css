@@ -17,12 +17,14 @@ header {
 	text-align: center ;
 	text-decoration: none;
 }
-header h1 {
+
+h1 {
 	font-size: 30pt ;
 	text-decoration: none;
 	text-align: center ;
 }
-header h2 {
+
+h2 {
 	text-decoration: none;
 	text-align: center ;
 }
