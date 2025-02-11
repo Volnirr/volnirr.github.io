@@ -29,6 +29,10 @@ h2 {
 	text-align: center ;
 }
 
+.no-ul {
+	text-decoration: none;
+}
+
 ul {
 	padding-left: 10vw ;
 }
