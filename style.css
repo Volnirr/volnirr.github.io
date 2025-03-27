@@ -70,10 +70,6 @@ section {
     transition: all 0.3s ease;
 }
 
-section:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
 
 h1, h2 {
     color: #ff8c00;
@@ -81,17 +77,6 @@ h1, h2 {
     font-weight: 300;
     position: relative;
     padding-bottom: 10px;
-}
-
-h1::after, h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: #ff8c00;
-    border-radius: 2px;
 }
 
 h3 {
@@ -114,10 +99,6 @@ h3 {
     border: 1px solid rgba(255,140,0,0.2);
 }
 
-.book-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-}
 
 .link-list {
     list-style-type: none;
@@ -161,11 +142,6 @@ article {
     margin-bottom: 25px;
     border-radius: 20px;
     transition: all 0.3s ease;
-}
-
-article:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .date {
